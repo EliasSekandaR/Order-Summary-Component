@@ -1,0 +1,160 @@
+html {
+  overflow-x: hidden;
+}
+
+:root {
+  /* Primary Colors */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Violet-hover: hsl(258, 39%, 52%);
+  /* Neutral */
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  /* Measures   */
+
+  --border-radius-size: 12px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: var(--Pale-blue);
+  font-family: 'Red Hat Display', serif;
+}
+
+.background-pattern {
+  z-index: -1;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: var(--border-radius-size);
+  max-width: 20rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+  top: 15vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container > img {
+  max-width: 20rem;
+  border-top-left-radius: var(--border-radius-size);
+  border-top-right-radius: var(--border-radius-size);
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-size);
+  background-color: var(--Very-pale-blue);
+}
+
+.plan-container > img {
+  width: 2.2em;
+  margin: 0 17px;
+  object-fit: contain;
+}
+
+.container > h3 {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: var(--Dark-blue);
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.container > p {
+  text-align: center;
+  color: var(--Desaturated-blue);
+  font-size: small;
+  font-weight: 600;
+  margin: 15px 40px;
+}
+
+.plan-container > a {
+  font-size: small;
+  margin: 0 17px;
+  color: var(--Bright-blue);
+  font-weight: bold;
+}
+
+.plan-container > a:hover {
+  color: var(--Violet-hover);
+  text-decoration: none;
+}
+
+.plan-details {
+  padding-right: 25px;
+}
+.plan-details > h5 {
+  font-weight: 900;
+  color: var(--Dark-blue);
+  margin-bottom: 2px;
+  margin-top: 13px;
+}
+
+.plan-details > p {
+  font-weight: 600;
+  font-size: small;
+  color: var(--Desaturated-blue);
+  margin-top: 2px;
+}
+
+.container > button {
+  background-color: var(--Bright-blue);
+  color: white;
+  font-weight: 600;
+  font-size: small;
+  border: none;
+  border-radius: var(--border-radius-size);
+  width: 19.6em;
+  height: 3em;
+  margin: 2em;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  cursor: pointer;
+}
+
+.container > button:hover {
+  background-color: var(--Violet-hover);
+}
+
+.container > a {
+  text-decoration: none;
+  color: var(--Desaturated-blue);
+  font-size: small;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.container > a:hover {
+  color: var(--Dark-blue);
+}
+
+media screen and (min-width: 1440px) {
+  .background-pattern {
+    width: 100%;
+  }
+}
+
+media screen and (max-width: 375px) {
+  .background-pattern {
+    width: 100%;
+  }
+}
